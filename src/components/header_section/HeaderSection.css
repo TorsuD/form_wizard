@@ -1,0 +1,136 @@
+.headerSection {
+    /* display: flex; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+
+.headerSection__staticHeader {
+    background-color: #3e889f;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.headerSection__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px
+}
+
+ul > div{
+    padding: 5px;
+    border-radius: 10px;
+    /* border: 2px solid #e1edf2; */
+    color: #3e889f;
+}
+
+ul > div:hover {
+    background-color: #3e889f;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.headerSection__avatar {
+    display: flex;
+}
+
+.headerSection__avatar > div {
+    margin-right: 5px;
+}
+
+.headerSection__amount {
+    /* font-weight: 700; */
+    color: green !important;
+}
+
+.headerSection__navbarRightWeb {
+    display: flex;
+}
+
+
+.headerSection__navbarRight > div {
+    margin-right: 10px;
+    color: #3e889f;
+}
+
+.headerSection__list {
+    display: flex;
+}
+
+.headerSection__list > div {
+    margin-right: 10px;
+}
+
+.headerSection__navbarLeft {
+    display: flex;
+    align-items: center;
+}
+
+.headerSection__navbarLeft > div {
+    margin-right: 10px;
+}
+.hamburgerMenu{
+    display: none;
+}
+
+.headerSection__lowerNav {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #78b6d0;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 600px){
+.headerSection__navbar {
+    display: flex;
+    align-items: center;
+}
+
+.headerSection__navbarRightWeb {
+    display: none;
+}
+
+.hamburgerMenu{
+    display: block;
+}
+
+.headerSection__navbarRightMobile {
+    display: block;
+    height: 100%;
+    position: absolute;
+    color: white;
+    top: 70px;
+    left: 0%;
+    z-index: 99;
+    width: 70%;
+    transition: all 0.5s;
+    color: #3e889f;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.headerSection__lowerNavMobile{
+    display: block;
+    height: auto;
+    position: absolute;
+    background-color: white;
+    top: 300px;
+    left: 10%;
+    z-index: 99;
+    width: 70%;
+    transition: all 0.5s;
+}
+
+.headerSection__lowerNav{
+    display: none;
+}
+
+}

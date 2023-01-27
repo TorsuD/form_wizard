@@ -1,0 +1,30 @@
+.dropdownLink:hover {
+    cursor: pointer;
+    /* border: 1px solid #5691ab; */
+    /* border-bottom: 1px solid #5dc0eb; */
+
+    
+}
+
+.dropdownLink {
+    padding: 5px;
+    margin-right: 0px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffff
+    /* padding: 10px; */
+    /* border-right: 1px solid #e1edf2; */
+    
+
+}
+
+
+@media only screen and (max-width: 600px){
+
+    .dropdownLink {
+        color: #3e889f;
+        /* margin-left: 10px; */
+    
+    }
+
+}

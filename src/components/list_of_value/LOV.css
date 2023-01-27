@@ -1,0 +1,28 @@
+.ind__header {
+    padding:15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: rgb(12, 103, 200);
+    color: white;
+}
+
+.lov__button{
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+.lov__flex {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.lov__flexInput {
+    display: flex;
+    align-items: center;
+}
+
+.lov__code {
+    width: 30% !important;
+ }
