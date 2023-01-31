@@ -17,12 +17,12 @@ function DateField({ label }) {
             },
           ]}
         >
-          <div className="lov__flexInput" style={{ flex: 1 }}>
-            <div style={{ flex: 0.5 }}>
+          <div className="lov__flexInput" style={{ width: "100%" }}>
+            <div style={{ width: "20%" }}>
               <label>{label}</label>
             </div>
-            <div style={{ display: "flex", flex: 0.5 }}>
-              <DatePicker placeholder="Pick date" />
+            <div style={{ width: "360px" , marginLeft: "16px"}}>
+              <DatePicker size="xs" inputFormat="DD/MM/YYYY" placeholder="Formaat (Day / Month / Year)" />
             </div>
           </div>
         </Form.Item>

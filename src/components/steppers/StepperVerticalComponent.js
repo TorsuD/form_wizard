@@ -1,88 +1,87 @@
-import { useState } from "react";
-import { Stepper, Button, Group, Flex } from "@mantine/core";
-import "./StepperComponent.css";
-import {
-  FiCheck,
-  FiDollarSign,
-  FiMail,
-  FiShield,
-  FiUser,
-  FiUserPlus,
-} from "react-icons/fi";
-import Individual from "../individual/Individual";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+import StepContent from "@mui/material/StepContent";
+import Button from "@mui/material/Button";
+import Paper from "@mui/material/Paper";
+import Typography from "@mui/material/Typography";
+import IndividualTwo from "../individual_two/IndividualTwo";
 
-function StepperVerticalComponent() {
-  const [active, setActive] = useState(0);
-  const nextStep = () =>
-    setActive((current) => (current < 6 ? current + 1 : current));
-  const prevStep = () =>
-    setActive((current) => (current > 0 ? current - 1 : current));
+const steps = [
+  {
+    label: "Select campaign settings",
+    description: `For each ad campaign that you create, you can control how much
+              you're willing to spend on clicks and conversions, which networks
+              and geographical locations you want your ads to show on, and more.`,
+  },
+  {
+    label: "Create an ad group",
+    description:
+      "An ad group contains one or more ads which target a shared set of keywords.",
+  },
+  {
+    label: "Create an ad",
+    description: `Try out different ad text to see what brings in the most customers,
+              and learn how to enhance your ads using features like ad extensions.
+              If you run into any problems with your ads, find out how to tell if
+              they're running and how to resolve approval issues.`,
+  },
+];
+
+export default function VerticalLinearStepper() {
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleReset = () => {
+    setActiveStep(0);
+  };
 
   return (
-    <div className="stepper">
+    <Box
+      sx={{
+        maxWidth: "100%",
+        margin: "30px",
+        padding: "20px",
+      }}
+    >
       <div>
-        <Stepper
-          active={active}
-          onStepClick={setActive}
-          breakpoint="sm"
-          allowNextStepsSelect={false}
-        >
-          <Stepper.Step
-            icon={<FiUser />}
-            label="Individual"
-            description="Create an account"
-          >
-            <Individual />
-          </Stepper.Step>
-          <Stepper.Step
-            icon={<FiMail />}
-            label="Account Details"
-            description="Verify email"
-          >
-            Step 2 content: Verify email
-          </Stepper.Step>
-          <Stepper.Step
-            icon={<FiCheck />}
-            label="Account Mandate"
-            description="Get full access"
-          >
-            Step 3 content: Get full access
-          </Stepper.Step>
-          <Stepper.Step
-            icon={<FiDollarSign />}
-            label="EBanking/Customer Risk Analysis"
-            description="Get full access"
-          >
-            Step 3 content: Get full access
-          </Stepper.Step>
-          <Stepper.Step
-            icon={<FiUserPlus />}
-            label="Account Referees"
-            description="Get full access"
-          >
-            Step 3 content: Get full access
-          </Stepper.Step>
-          <Stepper.Step
-            icon={<FiShield />}
-            label="Anti-Money Laundering"
-            description="Get full access"
-          >
-            Step 3 content: Get full access
-          </Stepper.Step>
-          <Stepper.Completed>
-            Completed, click back button to get to previous step
-          </Stepper.Completed>
+        <Stepper activeStep={activeStep} orientation="vertical">
+          {steps.map((step, index) => (
+            <Step key={step.label}>
+              <StepLabel
+                optional={
+                  index === 2 ? (
+                    <Typography variant="caption">Last step</Typography>
+                  ) : null
+                }
+              >
+                {step.label}
+              </StepLabel>
+              <StepContent>
+                <Typography>{step.description}</Typography>
+                <IndividualTwo />
+              </StepContent>
+            </Step>
+          ))}
         </Stepper>
-
-        <Group position="center" mt="xl">
-          <Button variant="default" onClick={prevStep}>
-            Back
-          </Button>
-          <Button onClick={nextStep}>Next step</Button>
-        </Group>
+        {activeStep === steps.length && (
+          <Paper square elevation={0} sx={{ p: 3 }}>
+            <Typography>All steps completed - you&apos;re finished</Typography>
+            <Button onClick={handleReset} sx={{ mt: 1, mr: 1 }}>
+              Reset
+            </Button>
+          </Paper>
+        )}
       </div>
-    </div>
+    </Box>
   );
 }
-
-export default StepperVerticalComponent;

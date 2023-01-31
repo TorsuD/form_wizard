@@ -2,7 +2,7 @@ import { Form, Input } from "antd";
 import React from "react";
 import "../list_of_value/LOV.css";
 
-function InputField({ label }) {
+function InputField({ label, placeholder }) {
   return (
     <div>
       <div>
@@ -16,12 +16,17 @@ function InputField({ label }) {
             },
           ]}
         >
-          <div className="lov__flexInput" style={{ flex: 1 }}>
-            <div style={{ flex: 0.5 }}>
+          <div
+            className="lov__flexInput"
+            style={{
+              width: "100%",
+            }}
+          >
+            <div style={{ width: "20%" }}>
               <label>{label}</label>
             </div>
-            <div style={{ display: "flex", flex: 0.5 }}>
-              <Input />
+            <div style={{ display: "flex", flex: 0.8, marginLeft:"16px" }}>
+              <Input placeholder={placeholder} />
             </div>
           </div>
         </Form.Item>

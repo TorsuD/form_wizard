@@ -1,4 +1,5 @@
-.individual__container{
+
+.acccountDetails__container{
     padding: 0px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -7,7 +8,7 @@
     width: 100%;
 }
 
-.ind__title {
+.acd__title {
     padding:10px;
     display: flex;
     border-radius: 10px;
@@ -15,12 +16,12 @@
     color: white;
 }
 
-.ind__button{
+.acd__button{
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.ind__flex {
+.acd__flex {
     display: flex;
     justify-content: space-evenly;
     /* width: 100%; */
@@ -36,22 +37,22 @@
     border-radius: 20px; 
 }
 
-.ind__firstColumn {
+.acd__firstColumn {
     flex: 0.45;
-    margin-left: 58px;
+    margin-left: 78px;
 }
 
-.ind__secondColumn {
+.acd__secondColumn {
     flex: 0.45;
 }
 
 
-.ind__flexInput {
+.acd__flexInput {
     display: flex;
     align-items: center;
 }
 
-.ind__buttonSection {
+.acd__buttonSection {
     display: flex;
     justify-content: space-between;
     margin-left: 10px;
@@ -59,37 +60,37 @@
     padding-top: 15px;
 }
 
-.ind__checkBtn{
+.acd__checkBtn{
     margin-right: 10px;
 }
 
-.ind__colorWheel {
+.acd__colorWheel {
     height: 30px;
 }
 
 @media only screen and (max-width: 700px){
 
-    .individual__container{
+    .accountDetails__container{
         padding: 5px;
     }
 
-    .ind__flex {
+    .acd__flex {
         flex-direction: column;
         margin: 10px;
     padding: 20px;
     }
 
-    .ind__buttonSection{
+    .acd__buttonSection{
         flex-direction: column;
         padding: 5px;
     }
 
-    .ind__checkBtn{
+    .acd__checkBtn{
         margin-bottom: 10px;
         margin-right: 0;
     }
 
-    .ind__firstColumn {
+    .acd__firstColumn {
     margin-left: 0px;
 
     }

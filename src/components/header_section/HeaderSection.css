@@ -8,7 +8,7 @@
 
 
 .headerSection__staticHeader {
-    background-color: #3e889f;
+    background-color: rgb(111, 137, 228);
     padding: 10px;
     color: white;
     text-align: center;
@@ -22,14 +22,14 @@
 }
 
 ul > div{
-    padding: 5px;
+    padding: 8px;
     border-radius: 10px;
     /* border: 2px solid #e1edf2; */
-    color: #3e889f;
+    color: rgb(69, 97, 199);
 }
 
 ul > div:hover {
-    background-color: #3e889f;
+    background-color: rgb(111, 137, 228);
     color: white;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -82,7 +82,7 @@ ul > div:hover {
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    background-color: #78b6d0;
+    background-color: rgb(96, 127, 242);
     color: white;
 }
 

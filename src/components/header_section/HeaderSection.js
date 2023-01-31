@@ -83,23 +83,12 @@ function HeaderSection() {
                   : "headerSection__navbarRightWeb"
               }
             >
-              <div>Account No.</div>
-              <div>Customer Details</div>
-              <div>Batch No.</div>
-              <div className="headerSection__avatar">
-                <div>
-                  <FiUser />
-                </div>
-                <div>Inloggen</div>
-              </div>
-
-              <div className="headerSection__amount">$3,200</div>
-
-              <div>
-                <FiShoppingCart />
-              </div>
-
-              <div>NL</div>
+              <div>Utilities</div>
+              <div>General Enquiry</div>
+              <div>Central Approval</div>
+              <div>Calculation</div>
+              <div>Users</div>
+              <div>Help</div>
             </ul>
           </div>
           <div className="hamburgerMenu" onClick={handleClick}>

@@ -8,7 +8,7 @@
 
 .lov__button{
     margin-left: 5px;
-    margin-right: 5px;
+    /* margin-right: 5px; */
     
 }
 
@@ -25,4 +25,13 @@
 
 .lov__code {
     width: 30% !important;
+ }
+
+ .lov__select {
+    background-color: "#e3e3e3";
+                  flex: 0.87;
+                  border-top-left-radius: "0px" !important;
+                  border-bottom-left-radius: "0px" !important;
+                  border-top-right-radius: "17px " !important;
+                  border-bottom-right-radius: "17px" !important;
  }

@@ -3,12 +3,11 @@ import { Form } from "antd";
 import "../list_of_value/LOV.css";
 import { Select } from "@mantine/core";
 
-function SelectField({ label }) {
+function SelectField({ label, placeholder }) {
   return (
     <div>
       <div>
         <Form.Item
-          //   label={label}
           name="username"
           rules={[
             {
@@ -17,13 +16,15 @@ function SelectField({ label }) {
             },
           ]}
         >
-          <div className="lov__flexInput" style={{ flex: 1 }}>
-            <div style={{ flex: 0.5 }}>
+          <div className="lov__flexInput" style={{ width: "100%" }}>
+            <div style={{ width: "20%" }}>
               <label>{label}</label>
             </div>
-            <div style={{ display: "flex", flex: 0.5 }}>
+            <div style={{ display: "flex" }}>
               <Select
-                placeholder="Pick one"
+                placeholder={placeholder}
+                shadow="lg"
+                style={{ width: "300px" }}
                 data={[
                   { value: "male", label: "Male" },
                   { value: "female", label: "Female" },
