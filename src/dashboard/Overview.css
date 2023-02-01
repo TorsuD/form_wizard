@@ -1,0 +1,71 @@
+.overview__theme {
+    position: relative;
+    /* background-color: rgb(66, 157, 232); */
+    /* background-color: rgb(59, 144, 212); */
+    height: 130px;
+    width: 100%;
+}
+
+.overview__body {
+    position: absolute;
+    top: 35px;
+    margin: 0 5%;
+    width: 90%;
+    /* overflow-x: scroll; */
+    z-index: 1;
+}
+
+.overview__nav {
+    background-color: rgb(229, 229, 229);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    display:flex;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+
+.overview__nav::-webkit-scrollbar {
+    display: none;
+}
+
+.overview__menuItem {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.overview__menuItem > div {
+margin-right: 30px;
+}
+
+.overview__menuIcon {
+    margin-right: 5px;
+    margin-bottom: 3px;
+}
+
+.overview__menuName {
+   white-space: nowrap;
+}
+
+.overview__admin {
+    display: flex;
+    align-items: center
+}
+
+.overview__admin > div {
+   margin-right: 13px;
+}
+
+.overview__cardContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .overview__cardContainer {
+        flex-direction: column;
+    }
+}

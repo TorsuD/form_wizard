@@ -8,7 +8,6 @@ function DateField({ label }) {
     <div>
       <div>
         <Form.Item
-          //   label={label}
           name="username"
           rules={[
             {

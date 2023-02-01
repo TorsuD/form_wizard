@@ -29,36 +29,6 @@ function TitleHeader(props) {
         }}
       >
         <div>{props.title}</div>
-        {/* <DropdownButton
-          id="colorWheel"
-          title={
-            <img
-              src="https://cdn-icons-png.flaticon.com/128/3953/3953405.png"
-              alt="color wheel"
-              className="ind__colorWheel"
-            />
-          }
-          variant={props.buttonColor}
-        >
-          <Dropdown.Item onClick={props.defaultColorTheme} id="defaultID">
-            Default
-          </Dropdown.Item>
-          <Dropdown.Item onClick={props.themeColor1} id="blue">
-            Blue
-          </Dropdown.Item>
-          <Dropdown.Item onClick={props.themeColor2} id="red">
-            Red
-          </Dropdown.Item>
-          <Dropdown.Item onClick={props.themeColor3} id="purple">
-            Purple
-          </Dropdown.Item>
-          <Dropdown.Item onClick={props.themeColor4} id="orange">
-            Orange
-          </Dropdown.Item>
-          <Dropdown.Item onClick={props.themeColor5} id="green">
-            Green
-          </Dropdown.Item>
-        </DropdownButton> */}
 
         <Menu shadow="md" width={130}>
           <Menu.Target>
